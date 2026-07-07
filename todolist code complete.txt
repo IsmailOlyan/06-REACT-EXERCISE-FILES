@@ -1,0 +1,48 @@
+import { useState } from 'react';
+
+const TodoList = () => {
+    // state hook 
+    const [todos, setTodos] = useState([]);
+
+    // waxa manage garenayo input ka wuxu qoro 
+    const [inputValue, setInputValue] = useState('');
+
+    // this method will execute when you click (add ) button  
+    const handleAddTodo = () => {
+        // Prevent adding empty items
+        if (inputValue.trim() === '') return;
+
+        const newTodo = {
+            id: crypto.randomUUID(),
+            text: inputValue,
+            completed: false
+        };
+
+        // Fixed: Moved inside the function, changed 'items' to 'todos'
+        setTodos([...todos, newTodo]); 
+        setInputValue(''); // Clear input after adding
+        
+        // Optional but recommended: Clear input after adding
+        setInputValue(''); 
+    };
+
+    return (
+        <>
+            <h2>Todo List</h2>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+            />
+            <button onClick={handleAddTodo}>Add </button>
+            <ul>
+                {todos.map(todo => (
+                    // Added unique key and rendering todo.text instead of the whole object
+                    <li key={todo.id}>{todo.text}</li>
+                ))}
+            </ul>
+        </>
+    );
+};
+
+export default TodoList;

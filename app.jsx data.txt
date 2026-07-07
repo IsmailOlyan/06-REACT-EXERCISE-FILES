@@ -10,9 +10,8 @@
 
 
 // import TodoList from './TodoList';
-// import UseEffectE from './Lessons/lesson-05/UseEffect';
-import SimpleShoping from './Components/Exercise-05/SimpleShoping';
-// import DocumentTitle from './Components/Exercise-06/DocumentTitle';
+import UseEffectE from './Lessons/lesson-05/UseEffect';
+import DocumentTitle from './Components/Exercise-06/DocumentTitle';
 
 function App  ()  {
 
@@ -50,9 +49,8 @@ function App  ()  {
   </button> */}
       {/* <ToggleButton /> */}
       {/* <TodoList /> */}
-      {/* <UseEffectE /> */}
-      <SimpleShoping />
-      {/* <DocumentTitle /> */}
+      <UseEffectE />
+      <DocumentTitle />
     </>
   )
 }
