@@ -9,11 +9,13 @@ import TodoList from './TodoList';
 import UseEffectE from './Lessons/lesson-05/UseEffect';
 import SimpleShoping from './Components/Exercise-05/SimpleShoping';
 import DocumentTitle from './Components/Exercise-06/DocumentTitle';
+import WindResize from './Lessons/lesson-06/WindResize';
+import MouseTracker from './Components/Exercise-07/MouseTracker';
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
   // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
-  const [currentLesson, setCurrentLesson] = useState("document-title");
+  const [currentLesson, setCurrentLesson] = useState("mouseTracker");
 
   // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
   const renderLesson = () => {
@@ -34,6 +36,10 @@ function App() {
         return <SimpleShoping />;
       case "document-title":
         return <DocumentTitle />;
+      case "resize":
+        return <WindResize />;
+      case "mouseTracker":
+        return <MouseTracker />;
       default:
         return <div>Dooro Cashar Sax Ah</div>;
     }
