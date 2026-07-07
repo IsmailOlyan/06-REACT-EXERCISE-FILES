@@ -1,61 +1,50 @@
-// import UserCard from "./UserCard";
-// import UserCard from './components/Exercise-01/UserCard';
-// import Layout from './Layout'
-// import Blog from './components/Exercise-03/UserCard';
-// import UserCard from './components/Exercise-03/UserCard';
+import { useState } from "react";
 
-// setCount toggle 
-// import { useState } from "react";
-// import ToggleButton from './Components/Exercise-04/ToggleButton';
-
-
-// import TodoList from './TodoList';
-// import UseEffectE from './Lessons/lesson-05/UseEffect';
+// 📂 Halkaan ku wada keydi dhammaan Imports-ka (Waa caadi hadday furan yihiin)
+import UserCard from './components/Exercise-01/UserCard';
+import Layout from './Layout';
+import Blog from './components/Exercise-03/UserCard';
+import ToggleButton from './Components/Exercise-04/ToggleButton';
+import TodoList from './TodoList';
+import UseEffectE from './Lessons/lesson-05/UseEffect';
 import SimpleShoping from './Components/Exercise-05/SimpleShoping';
-// import DocumentTitle from './Components/Exercise-06/DocumentTitle';
+import DocumentTitle from './Components/Exercise-06/DocumentTitle';
 
-function App  ()  {
+function App() {
+  // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
+  // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
+  const [currentLesson, setCurrentLesson] = useState("document-title");
 
-  // setCount toggle
-  // const [count, setCount] = useState(0);
-  // const increament = ()=>{
-    
-  //   setCount(count + 1)
-  // }
+  // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
+  const renderLesson = () => {
+    switch (currentLesson) {
+      case "usercard":
+        return <UserCard name="Eng Ismail Olyan" email="ismaaciil1432@gmail.com" />;
+      case "layout":
+        return <Layout />;
+      case "blog":
+        return <Blog />;
+      case "toggle":
+        return <ToggleButton />;
+      case "todo":
+        return <TodoList />;
+      case "useeffect":
+        return <UseEffectE />;
+      case "shopping":
+        return <SimpleShoping />;
+      case "document-title":
+        return <DocumentTitle />;
+      default:
+        return <div>Dooro Cashar Sax Ah</div>;
+    }
+  };
 
   return (
     <>
-      {/* < UserCard/> */}
-      {/* <Layout /> */}
-      {/* <Blog /> */}
-
-
-      {/* <UserCard
-        name="Eng Ismail Olyan"
-        email="ismaaciil1432@gmail.com"
-      />
-      <UserCard
-        name="Eng Abdirahman Alasow"
-        email="alasow@gmail.com"
-      />
-      <UserCard
-        name="Eng Omar Abdi"
-        email="mromarabdi@gmail.com"
-      /> */}
-  
-  {/* setCount toggle */}
-  {/* <h1>you clicked {count} times</h1>
-  <button onClick={increament} style={{ backgroundColor: 'blue', color: 'white' }}>
-    click me
-  </button> */}
-      {/* <ToggleButton /> */}
-      {/* <TodoList /> */}
-      {/* <UseEffectE /> */}
-      <SimpleShoping />
-      {/* <DocumentTitle /> */}
+      {/* Koodhka halkan ku jira waa mid nadiif ah, wax dhib ahna kuuma keenayo */}
+      {renderLesson()}
     </>
-  )
+  );
 }
-
 
 export default App;
