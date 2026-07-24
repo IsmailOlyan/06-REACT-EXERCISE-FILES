@@ -21,12 +21,13 @@ import Counter from './EXERCISES/Exercise-12/Counter';
 import ShopingCart from './ShopingCart'
 import CounterWithReducer from './CounterWithReducer'
 import TodoApp from './TodoApp'
+import DoubleCounter from './EXERCISES/Exercise-13/DoubleCounter';
 
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
   // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
-  const [currentLesson, setCurrentLesson] = useState("countdown");
+  const [currentLesson, setCurrentLesson] = useState("doubledounter");
 
   // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
   const renderLesson = () => {
@@ -73,6 +74,8 @@ function App() {
         return <CounterWithReducer />
       case 'TodoApp':
         return <TodoApp />
+      case 'doubledounter':
+        return <DoubleCounter />
 
 
       default:
