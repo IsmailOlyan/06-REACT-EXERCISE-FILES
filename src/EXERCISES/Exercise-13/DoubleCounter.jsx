@@ -11,7 +11,7 @@ const reducer = (state, action) => {
             return { ...state, counterA: state.counterA + 1 };
         case 'DECREMENT_A':
             return { ...state, counterA: state.counterA > 0 ? state.counterA - 1 : 0 };
-        case 'RESET_A': //  optional task i added my own!
+        case 'RESET_A': //  optional task i've added my own!
             return { ...state, counterA: 0 };
 
         case 'INCREMENT_B':

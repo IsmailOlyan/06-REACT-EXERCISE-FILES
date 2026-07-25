@@ -1,12 +1,9 @@
 
 import { useState, useReducer } from "react";
-
 const intialState = [];
 
 const reducer = (state, action) =>{
-
     switch(action.type){
-
         case 'Add':
             return [...state, action.payload]
         case 'Toggle':
@@ -17,6 +14,7 @@ const reducer = (state, action) =>{
             state;
     }
 }
+
 const TodoApp = () =>{
 
     const [state, dispatch] = useReducer(reducer, intialState)
@@ -28,26 +26,22 @@ const TodoApp = () =>{
                 id: Date.now(),
                 text,
                 Completed: false
-
-
             }
             dispatch ({type: 'Add', payload: newTodo})
             setText('')
           }  
         }
+
     return(
         <>
         <h2>Todo App</h2>
-        <input type="text"
-        value={text}
-        onChange={(e)=> setText(e.target.value)} />
+        <input type="text" value={text}onChange={(e)=> setText(e.target.value)} />
 
         <button onClick={handleAdd}>Add Todo</button>
         <ul>
             {
                state.map(todo =>(
-                <li key={todo.id}>
-                    
+                <li key={todo.id}>    
                    <span 
                    style={{textDecoration: todo.completed? 'line-through' : "none"}}
                    onClick={()=> dispatch({type:"Toggle", payload: todo.id})}>{todo.text}
