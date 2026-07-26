@@ -15,11 +15,13 @@ import StopWatch from './Lessons/lesson-07/StopWatch';
 import Countdown from './Components/Exercise-08/Countdown';
 import FetchData from './Lessons/Lesson-08/FetchData';
 import RenderList from './Lessons/Lesson-09/RenderList';
+import GitHubUserSearch from './Components/Exercise-09/GitHubUserSearch';
+import HnadleEvent from './Components/Exercise-09/HandleEvent';
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
   // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
-  const [currentLesson, setCurrentLesson] = useState("renderList");
+  const [currentLesson, setCurrentLesson] = useState("handleEvent");
 
   // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
   const renderLesson = () => {
@@ -52,6 +54,10 @@ function App() {
         return <Countdown />;
         case "fetchdata":
         return <FetchData />;
+        case "gitHubUserSearch":
+        return <GitHubUserSearch />
+        case "handleEvent":
+          return <HnadleEvent />
        
       default:
         return <div>Dooro Cashar Sax Ah</div>;
