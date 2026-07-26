@@ -1,0 +1,11 @@
+.buttonContainer{
+    padding: 4px 8px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    margin: 0 5px;
+}
+
+body{
+    /* background-color: rgb(24, 229, 157); */
+}

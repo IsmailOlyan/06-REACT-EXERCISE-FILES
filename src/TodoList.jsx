@@ -19,7 +19,7 @@ const TodoList = () => {
 
     return (
         <>
-            <h1>My Todo List:</h1>
+            <h1 className='bg-green-500'>My Todo List:</h1>
 
             <input
                 type="text"
@@ -32,7 +32,10 @@ const TodoList = () => {
                 {todos.map(todo => (
                     <li key={todo.id}>{todo.text}</li>
                 ))}
+                <button >Delete</button>
+
             </ul>
+
         </>
     )
 }
