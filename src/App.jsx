@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// 📂 Halkaan ku wada keydi dhammaan Imports-ka (Waa caadi hadday furan yihiin)
+// 📂 Imports
 import UserCard from './EXERCISES/Exercise-01/UserCard';
 import Layout from './Layout';
 import Blog from './EXERCISES/Exercise-03/UserCard';
@@ -16,30 +16,29 @@ import Countdown from './EXERCISES/Exercise-08/Countdown';
 import FetchData from './Lessons/Lesson-08/FetchData';
 import RenderList from './Lessons/Lesson-09/RenderList';
 import GitHubUserSearch from './EXERCISES/Exercise-09/GitHubUserSearch';
+import HandleEvent from './Components/Exercise-09/HandleEvent';
 import LoginForm from './EXERCISES/Exercise-11/LoginForm';
 import Counter from './EXERCISES/Exercise-12/Counter';
-import ShopingCart from './ShopingCart'
-import CounterWithReducer from './CounterWithReducer'
-import Todos from './Todos'
+import ShopingCart from './ShopingCart';
+import CounterWithReducer from './CounterWithReducer';
+import Todos from './Todos';
 import DoubleCounter from './EXERCISES/Exercise-13/DoubleCounter';
 import MultiStepForm from './EXERCISES/Exercise-14/MultiStepForm';
 import Theme from './Theme';
-import Language from './EXERCISES/Exercise-15/Language'; 
-import Product from './EXERCISES/Exercise-16/Product'; //kan waa qabyo cilad ayaana ka jirto
-// Change this line in App.jsx:
-import  GitHub  from './Lessons/Custom-Hook/GitHub';
-import TodoApp from "./Lessons/TodoApp/TodoApp";
+import Language from './EXERCISES/Exercise-15/Language';
+// import Product from './EXERCISES/Exercise-15/Product';
+import GitHub from './Lessons/Custom-Hook/GitHub';
+import TodoApp from './Lessons/TodoApp/TodoApp';
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
-  // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
   const [currentLesson, setCurrentLesson] = useState("Language");
 
-  // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
   const renderLesson = () => {
     switch (currentLesson) {
       case "renderList":
-        return <RenderList />
+      case "renderlist":
+        return <RenderList />;
       case "usercard":
         return <UserCard name="Eng Ismail Olyan" email="ismaaciil1432@gmail.com" />;
       case "layout":
@@ -63,51 +62,44 @@ function App() {
       case "stopwatch":
         return <StopWatch />;
       case "countdown":
-        return <Countdown />
+        return <Countdown />;
       case "fetchdata":
         return <FetchData />;
-      case "renderlist":
-        return <RenderList />;
       case "gitHubUserSearch":
-        return <GitHubUserSearch />
-      case 'loginform':
-        return <LoginForm />
-      case 'Counter':
-        return <Counter />
-      case 'ShopingCart':
-        return <ShopingCart />
-      case 'CounterWithReducer':
-        return <CounterWithReducer />
-      case 'Todos':
-        return <Todos />
-      case 'doubledounter':
-        return <DoubleCounter />
-      case 'MultiStepForm':
-        return <MultiStepForm />
-       case 'theme':
-        return <Theme />
-       case 'Language':
+        return <GitHubUserSearch />;
+      case "handleEvent":
+        return <HandleEvent />;
+      case "loginform":
+        return <LoginForm />;
+      case "Counter":
+        return <Counter />;
+      case "ShopingCart":
+        return <ShopingCart />;
+      case "CounterWithReducer":
+        return <CounterWithReducer />;
+      case "Todos":
+        return <Todos />;
+      case "doubledounter":
+        return <DoubleCounter />;
+      case "MultiStepForm":
+        return <MultiStepForm />;
+      case "theme":
+        return <Theme />;
+      // case "Product":
+      //   return <Product />;
+      case 'Language':
         return <Language />
-       case 'Product':
-        return <Product />
-      case 'GitHub':
-        return <GitHub />
-      case 'TodoApp':
-        return <TodoApp />
-     
-
+      case "GitHub":
+        return <GitHub />;
+      case "TodoApp":
+        return <TodoApp />;
 
       default:
         return <div>Dooro Cashar Sax Ah</div>;
     }
   };
 
-  return (
-    <>
-      {/* Koodhka halkan ku jira waa mid nadiif ah, wax dhib ahna kuuma keenayo */}
-      {renderLesson()}
-    </>
-  );
+  return <>{renderLesson()}</>;
 }
 
 export default App;
