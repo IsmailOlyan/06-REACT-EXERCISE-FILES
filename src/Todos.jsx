@@ -15,7 +15,7 @@ const reducer = (state, action) =>{
     }
 }
 
-const TodoApp = () =>{
+const Todos = () =>{
 
     const [state, dispatch] = useReducer(reducer, intialState)
     const [text, setText] = useState('')
@@ -55,4 +55,4 @@ const TodoApp = () =>{
     )
 }
 
-export default TodoApp;
+export default Todos;

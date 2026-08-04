@@ -20,15 +20,20 @@ import LoginForm from './EXERCISES/Exercise-11/LoginForm';
 import Counter from './EXERCISES/Exercise-12/Counter';
 import ShopingCart from './ShopingCart'
 import CounterWithReducer from './CounterWithReducer'
-import TodoApp from './TodoApp'
+import Todos from './Todos'
 import DoubleCounter from './EXERCISES/Exercise-13/DoubleCounter';
 import MultiStepForm from './EXERCISES/Exercise-14/MultiStepForm';
-
+import Theme from './Theme';
+import Language from './EXERCISES/Exercise-15/Language'; 
+import Product from './EXERCISES/Exercise-16/Product'; //kan waa qabyo cilad ayaana ka jirto
+// Change this line in App.jsx:
+import  GitHub  from './Lessons/Custom-Hook/GitHub';
+import TodoApp from "./Lessons/TodoApp/TodoApp";
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
   // Waxaad u beddeli kartaa: "usercard", "layout", "todo", "shopping", ama "document-title"
-  const [currentLesson, setCurrentLesson] = useState("MultiStepForm");
+  const [currentLesson, setCurrentLesson] = useState("Language");
 
   // Habkan wuxuu si toos ah u furayaa casharka aad magaciisa sarre ku qorto
   const renderLesson = () => {
@@ -73,12 +78,23 @@ function App() {
         return <ShopingCart />
       case 'CounterWithReducer':
         return <CounterWithReducer />
-      case 'TodoApp':
-        return <TodoApp />
+      case 'Todos':
+        return <Todos />
       case 'doubledounter':
         return <DoubleCounter />
       case 'MultiStepForm':
         return <MultiStepForm />
+       case 'theme':
+        return <Theme />
+       case 'Language':
+        return <Language />
+       case 'Product':
+        return <Product />
+      case 'GitHub':
+        return <GitHub />
+      case 'TodoApp':
+        return <TodoApp />
+     
 
 
       default:
