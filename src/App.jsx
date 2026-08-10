@@ -24,6 +24,9 @@ import CounterWithReducer from './CounterWithReducer';
 import Todos from './Todos';
 import DoubleCounter from './EXERCISES/Exercise-13/DoubleCounter';
 import MultiStepForm from './EXERCISES/Exercise-14/MultiStepForm';
+
+
+import StudentDashboard from "./EXERCISES/Exercise-21/StudentDashboard";  
 import Theme from './Theme';
 import Language from './EXERCISES/Exercise-15/Language';
 // import Product from './EXERCISES/Exercise-15/Product';
@@ -32,7 +35,7 @@ import TodoApp from './Lessons/TodoApp/TodoApp';
 
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
-  const [currentLesson, setCurrentLesson] = useState("Language");
+  const [currentLesson, setCurrentLesson] = useState("studentDashboard");
 
   const renderLesson = () => {
     switch (currentLesson) {
@@ -93,6 +96,8 @@ function App() {
         return <GitHub />;
       case "TodoApp":
         return <TodoApp />;
+        case "studentDashboard":
+          return <StudentDashboard/>
 
       default:
         return <div>Dooro Cashar Sax Ah</div>;
