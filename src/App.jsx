@@ -28,13 +28,15 @@ import MultiStepForm from './EXERCISES/Exercise-14/MultiStepForm';
 
 import StudentDashboard from "./EXERCISES/Exercise-21/StudentDashboard";  
 import Language from './EXERCISES/Exercise-15/Language';
+import Form from './EXERCISES/Exercise-22/Form';
+import DeveloperForm from './EXERCISES/Exercise-23/DeveloperForm';
+import StudentRegistration from './EXERCISES/Exercise-24/StudentRegistration';
 // import Product from './EXERCISES/Exercise-15/Product';
 import GitHub from './Lessons/Custom-Hook/GitHub';
 import TodoApp from './Lessons/TodoApp/TodoApp';
-import Form from './EXERCISES/Exercise-22/Form';
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
-  const [currentLesson, setCurrentLesson] = useState("form");
+  const [currentLesson, setCurrentLesson] = useState("studentRegistration");
 
   const renderLesson = () => {
     switch (currentLesson) {
@@ -99,6 +101,10 @@ function App() {
           return <StudentDashboard/>
       case "form":
         return <Form />;
+      case "developerForm":
+        return <DeveloperForm />;
+      case "studentRegistration":
+        return <StudentRegistration />;
 
       default:
         return <div>Dooro Cashar Sax Ah</div>;
