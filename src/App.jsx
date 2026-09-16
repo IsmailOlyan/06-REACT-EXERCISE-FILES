@@ -27,15 +27,14 @@ import MultiStepForm from './EXERCISES/Exercise-14/MultiStepForm';
 
 
 import StudentDashboard from "./EXERCISES/Exercise-21/StudentDashboard";  
-import Theme from './Theme';
 import Language from './EXERCISES/Exercise-15/Language';
 // import Product from './EXERCISES/Exercise-15/Product';
 import GitHub from './Lessons/Custom-Hook/GitHub';
 import TodoApp from './Lessons/TodoApp/TodoApp';
-
+import Form from './EXERCISES/Exercise-22/Form';
 function App() {
   // 🎯 KALIYA HALKAN KA BEDDEL MAGACA CASHARKA AAD RABTO INAAD ARAGTO!
-  const [currentLesson, setCurrentLesson] = useState("studentDashboard");
+  const [currentLesson, setCurrentLesson] = useState("form");
 
   const renderLesson = () => {
     switch (currentLesson) {
@@ -98,6 +97,8 @@ function App() {
         return <TodoApp />;
         case "studentDashboard":
           return <StudentDashboard/>
+      case "form":
+        return <Form />;
 
       default:
         return <div>Dooro Cashar Sax Ah</div>;
