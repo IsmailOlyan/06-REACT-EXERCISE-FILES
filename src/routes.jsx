@@ -1,4 +1,4 @@
-// routes.js
+// routes.jsx
 import { createBrowserRouter } from 'react-router';
 import App from './App';
 import Home from './Home';
