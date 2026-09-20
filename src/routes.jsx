@@ -1,5 +1,5 @@
 // routes.js
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router';
 import App from './App';
 import Home from './Home';
 import About from './About';
