@@ -111,7 +111,10 @@ function App() {
     }
   };
 
-  return <>{renderLesson()}</>;
+  return <>
+  {renderLesson()}
+  < Outlet />
+  </>;
 }
 
 export default App;
